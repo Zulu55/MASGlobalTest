@@ -14,6 +14,7 @@
         public HomeController(IEmployeeRepository employeeRepository)
         {
             this.employeeRepository = employeeRepository;
+            this.employeeRepository.GetDataAsync().Wait();
         }
 
         public IActionResult Index()

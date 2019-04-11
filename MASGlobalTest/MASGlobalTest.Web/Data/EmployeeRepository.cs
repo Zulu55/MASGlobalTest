@@ -14,7 +14,6 @@
         public EmployeeRepository()
         {
             this.apiService = new ApiService();
-            this.GetDataFromApi().Wait();
         }
 
         private async Task GetDataFromApi()
@@ -39,6 +38,11 @@
         public List<Employee> GetEmployees()
         {
             return this.employees;
+        }
+
+        public async Task GetDataAsync()
+        {
+            await this.GetDataFromApi();
         }
     }
 }
