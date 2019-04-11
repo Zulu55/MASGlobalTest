@@ -1,12 +1,12 @@
-using MASGlobalTest.UnitTest.Mocks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace MASGlobalTest.UnitTest
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Mocks;
+
     [TestClass]
     public class EmployeeTest
     {
-        private EmployeeRepositoryMock employeeRepository;
+        private readonly EmployeeRepositoryMock employeeRepository;
 
         public EmployeeTest()
         {
